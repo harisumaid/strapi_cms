@@ -802,7 +802,7 @@ export interface ApiTrgAboutTrgAbout extends Schema.SingleType {
   attributes: {
     aboutHeading: Attribute.String;
     aboutImage: Attribute.String;
-    aboutDetails: Attribute.String;
+    aboutDetails: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
