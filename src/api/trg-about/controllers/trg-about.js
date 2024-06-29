@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * showcase controller
+ * trg-about controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::showcase.showcase');
+module.exports = createCoreController('api::trg-about.trg-about');

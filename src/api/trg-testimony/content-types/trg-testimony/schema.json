@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "testimonies",
+  "collectionName": "trg_testimonies",
   "info": {
-    "singularName": "testimony",
-    "pluralName": "testimonies",
-    "displayName": "Testimony",
-    "description": ""
+    "singularName": "trg-testimony",
+    "pluralName": "trg-testimonies",
+    "displayName": "TRG_Testimony"
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +16,7 @@
       "required": true
     },
     "clientTestimony": {
-      "type": "text",
+      "type": "string",
       "required": true
     },
     "clientRating": {
@@ -25,15 +24,7 @@
       "required": true
     },
     "clientProfilePic": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "type": "string"
     }
   }
 }

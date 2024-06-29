@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "abouts",
+  "collectionName": "trg_abouts",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About"
+    "singularName": "trg-about",
+    "pluralName": "trg-abouts",
+    "displayName": "TRG_About"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
       "type": "string"
     },
     "aboutDetails": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "aboutImage": {
       "type": "string"

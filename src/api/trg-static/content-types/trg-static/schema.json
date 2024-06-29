@@ -4,7 +4,7 @@
   "info": {
     "singularName": "trg-static",
     "pluralName": "trg-statics",
-    "displayName": "trgStatic"
+    "displayName": "TRG_Static"
   },
   "options": {
     "draftAndPublish": true
@@ -29,7 +29,7 @@
     "email": {
       "type": "string"
     },
-    "trgCompanyName": {
+    "companyName": {
       "type": "string"
     }
   }

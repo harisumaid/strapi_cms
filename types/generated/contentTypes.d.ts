@@ -788,31 +788,31 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutAbout extends Schema.SingleType {
-  collectionName: 'abouts';
+export interface ApiTrgAboutTrgAbout extends Schema.SingleType {
+  collectionName: 'trg_abouts';
   info: {
-    singularName: 'about';
-    pluralName: 'abouts';
-    displayName: 'About';
+    singularName: 'trg-about';
+    pluralName: 'trg-abouts';
+    displayName: 'TRG_About';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     aboutHeading: Attribute.String;
-    aboutDetails: Attribute.RichText;
+    aboutDetails: Attribute.Blocks;
     aboutImage: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::about.about',
+      'api::trg-about.trg-about',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::about.about',
+      'api::trg-about.trg-about',
       'oneToOne',
       'admin::user'
     > &
@@ -820,63 +820,30 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
-export interface ApiShowcaseShowcase extends Schema.CollectionType {
-  collectionName: 'showcases';
+export interface ApiTrgShowcaseTrgShowcase extends Schema.CollectionType {
+  collectionName: 'trg_showcases';
   info: {
-    singularName: 'showcase';
-    pluralName: 'showcases';
-    displayName: 'Showcase';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    showcaseUrl: Attribute.String & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::showcase.showcase',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::showcase.showcase',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiTestimonyTestimony extends Schema.CollectionType {
-  collectionName: 'testimonies';
-  info: {
-    singularName: 'testimony';
-    pluralName: 'testimonies';
-    displayName: 'Testimony';
+    singularName: 'trg-showcase';
+    pluralName: 'trg-showcases';
+    displayName: 'TRG_Showcase';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    clientName: Attribute.String & Attribute.Required;
-    clientTestimony: Attribute.Text & Attribute.Required;
-    clientRating: Attribute.Integer & Attribute.Required;
-    clientProfilePic: Attribute.Media;
+    showCaseUrl: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::testimony.testimony',
+      'api::trg-showcase.trg-showcase',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::testimony.testimony',
+      'api::trg-showcase.trg-showcase',
       'oneToOne',
       'admin::user'
     > &
@@ -889,7 +856,7 @@ export interface ApiTrgStaticTrgStatic extends Schema.SingleType {
   info: {
     singularName: 'trg-static';
     pluralName: 'trg-statics';
-    displayName: 'trgStatic';
+    displayName: 'TRG_Static';
   };
   options: {
     draftAndPublish: true;
@@ -901,7 +868,7 @@ export interface ApiTrgStaticTrgStatic extends Schema.SingleType {
     mapSocialHandle: Attribute.String;
     phoneNo: Attribute.String;
     email: Attribute.String;
-    trgCompanyName: Attribute.String;
+    companyName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -913,6 +880,39 @@ export interface ApiTrgStaticTrgStatic extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::trg-static.trg-static',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTrgTestimonyTrgTestimony extends Schema.CollectionType {
+  collectionName: 'trg_testimonies';
+  info: {
+    singularName: 'trg-testimony';
+    pluralName: 'trg-testimonies';
+    displayName: 'TRG_Testimony';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    clientName: Attribute.String & Attribute.Required;
+    clientTestimony: Attribute.String & Attribute.Required;
+    clientRating: Attribute.Integer & Attribute.Required;
+    clientProfilePic: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::trg-testimony.trg-testimony',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::trg-testimony.trg-testimony',
       'oneToOne',
       'admin::user'
     > &
@@ -938,10 +938,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::about.about': ApiAboutAbout;
-      'api::showcase.showcase': ApiShowcaseShowcase;
-      'api::testimony.testimony': ApiTestimonyTestimony;
+      'api::trg-about.trg-about': ApiTrgAboutTrgAbout;
+      'api::trg-showcase.trg-showcase': ApiTrgShowcaseTrgShowcase;
       'api::trg-static.trg-static': ApiTrgStaticTrgStatic;
+      'api::trg-testimony.trg-testimony': ApiTrgTestimonyTrgTestimony;
     }
   }
 }
