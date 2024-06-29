@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "trg_statics",
+  "info": {
+    "singularName": "trg-static",
+    "pluralName": "trg-statics",
+    "displayName": "trgStatic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "facebookSocialHandle": {
+      "type": "string"
+    },
+    "instagramSocialHandle": {
+      "type": "string"
+    },
+    "xSocialHandle": {
+      "type": "string"
+    },
+    "mapSocialHandle": {
+      "type": "string"
+    },
+    "phoneNo": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "trgCompanyName": {
+      "type": "string"
+    }
+  }
+}
