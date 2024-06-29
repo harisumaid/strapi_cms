@@ -4,7 +4,8 @@
   "info": {
     "singularName": "trg-about",
     "pluralName": "trg-abouts",
-    "displayName": "TRG_About"
+    "displayName": "TRG_About",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,10 +15,10 @@
     "aboutHeading": {
       "type": "string"
     },
-    "aboutDetails": {
-      "type": "blocks"
-    },
     "aboutImage": {
+      "type": "string"
+    },
+    "aboutDetails": {
       "type": "string"
     }
   }

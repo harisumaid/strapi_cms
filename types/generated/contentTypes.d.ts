@@ -794,14 +794,15 @@ export interface ApiTrgAboutTrgAbout extends Schema.SingleType {
     singularName: 'trg-about';
     pluralName: 'trg-abouts';
     displayName: 'TRG_About';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     aboutHeading: Attribute.String;
-    aboutDetails: Attribute.Blocks;
     aboutImage: Attribute.String;
+    aboutDetails: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
